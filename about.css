@@ -1,0 +1,370 @@
+/* ===============================
+   VARIABLES - Clínica Internacional
+   =============================== */
+:root {
+  --white: #ffffff;
+  --black: #000000;
+  --gray-100: #f5f5f5;
+  --gray-200: #e0e0e0;
+  --gray-700: #444444;
+  --blue-primary: #0072ce;
+  --blue-dark: #005bb5;
+  --green-cta: #25D366;
+  --green-cta-dark: #128C7E;
+  --radius: 6px;
+  --spacing: 1rem;
+  --transition: 0.3s ease;
+  --max-width: 1200px;
+}
+
+/* ===============================
+   RESET Y GENERALES
+   =============================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--gray-100);
+  color: var(--gray-700);
+  line-height: 1.6;
+}
+
+a {
+  color: var(--blue-primary);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+a:hover {
+  color: var(--blue-dark);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  width: 90%;
+  max-width: var(--max-width);
+  margin: auto;
+  padding: var(--spacing) 0;
+}
+
+/* ===============================
+   HEADER
+   =============================== */
+.header {
+  background-color: var(--white);
+  border-bottom: 1px solid var(--gray-200);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: var(--spacing) 0;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo-img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.logo-text {
+  font-size: 1.4rem;
+  color: var(--blue-dark);
+  font-weight: 700;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+.nav-links a {
+  font-weight: 500;
+  padding: 0.5rem;
+}
+
+.nav-links a.active {
+  border-bottom: 3px solid var(--blue-primary);
+}
+
+.header-actions .btn-cita {
+  background-color: var(--green-cta);
+  color: var(--white);
+  padding: 0.6rem 1rem;
+  border-radius: var(--radius);
+  font-weight: 600;
+  transition: background-color var(--transition);
+}
+
+.header-actions .btn-cita:hover {
+  background-color: var(--green-cta-dark);
+}
+
+/* ===============================
+   INTRO / BIO
+   =============================== */
+.intro-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 2rem 0;
+}
+
+.bio-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.bio-text h2 {
+  color: var(--blue-primary);
+  margin-bottom: 1rem;
+}
+
+.credentials {
+  font-weight: bold;
+  color: var(--gray-700);
+  margin-bottom: 1rem;
+}
+
+.summary {
+  font-size: 1.1rem;
+}
+
+.bio-photo {
+  flex: 1;
+  text-align: center;
+}
+
+.bio-photo img {
+  max-width: 300px;
+  border-radius: var(--radius);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ===============================
+   CTA FOOTER
+   =============================== */
+.cta-footer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+  margin: 4rem 0;
+}
+
+.cta-box {
+  padding: 2rem;
+  border-radius: var(--radius);
+  color: var(--white);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-box.emergency {
+  background: var(--blue-primary);
+}
+
+.cta-box.appointment {
+  background: var(--green-cta);
+}
+
+.cta-btn {
+  margin-top: var(--spacing);
+  background: var(--white);
+  color: var(--blue-primary);
+  padding: 0.6rem 1.2rem;
+  border-radius: var(--radius);
+  text-decoration: none;
+  font-weight: 500;
+  transition: background var(--transition), transform var(--transition);
+}
+
+.cta-btn:hover {
+  background: var(--gray-100);
+  transform: translateY(-2px);
+}
+
+/* ===============================
+   FOOTER (OPTIMIZADO)
+   =============================== */
+:root {
+  --blue-primary: #0072ce;
+  --blue-dark: #005bb5;
+  --gray-100: #f5f5f5;
+  --gray-200: #e0e0e0;
+  --gray-700: #444444;
+  --white: #ffffff;
+  --pink: #ff85a1;
+  --shadow: rgba(0, 0, 0, 0.05);
+  --radius: 10px;
+  --transition: 0.3s ease;
+}
+
+footer {
+  background-color: var(--blue-primary);
+  color: var(--white);
+  padding: 60px 40px 20px 40px;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-col {
+  flex: 1 1 250px;
+  min-width: 200px;
+}
+
+.footer-col h4 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  color: var(--white);
+}
+
+.footer-col p,
+.footer-col a {
+  color: var(--white);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 10px;
+  transition: color var(--transition);
+}
+
+.footer-col a:hover {
+  color: var(--gray-100);
+}
+
+/* Redes sociales como botones */
+.footer-social a {
+  display: inline-block;
+  background-color: var(--white-100);
+  color: var(--white);
+  padding: 10px 20px;
+  margin: 8px 8px 0 0;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color var(--gray-100);
+}
+
+.footer-social a:hover {
+  background-color: var(--blue-dark);
+}
+
+/* Card de dirección */
+.footer-address {
+  background-color: var(--gray-100);
+  color: var(--gray-700);
+  padding: 30px 30px 20px 30px;
+  border-radius: var(--radius);
+  box-shadow: 0 4px 10px var(--shadow);
+  max-width: 400px;
+  flex: 1 1 350px;
+}
+
+.footer-address h4 {
+  color: var(--blue-primary);
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+}
+
+.footer-address p {
+  font-size: 1rem;
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Íconos */
+.footer-address p::before {
+  content: '';
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background-size: cover;
+}
+
+.footer-address p:nth-of-type(1)::before {
+  content: '📍';
+}
+.footer-address p:nth-of-type(2)::before {
+  content: '📞';
+}
+.footer-address p:nth-of-type(3)::before {
+  content: '✉️';
+}
+
+/* Línea inferior */
+.footer-bottom {
+  text-align: center;
+  padding-top: 25px;
+  margin-top: 40px;
+  border-top: 1px solid var(--blue-dark);
+  font-size: 0.9rem;
+  color: var(--gray-100);
+}
+/* ===============================
+   RESPONSIVE
+   =============================== */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1rem;
+  }
+
+  .header-flex {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .intro-flex {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-top {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    text-align: center;
+  }
+
+  .footer-social {
+    align-items: center;
+  }
+
+  .footer-address {
+    padding: 1.2rem;
+  }
+}
+
