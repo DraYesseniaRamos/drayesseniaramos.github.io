@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;600;800&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
   <!-- Encabezado con logo, nombre, menú, redes y cita -->
@@ -20,14 +21,15 @@
       </div>
 
       <!-- Navegación -->
-      <nav>
-        <ul class="nav-links">
-        <a href="/index.html">Inicio</a>
-        <a href="/about.html">Sobre mí</a>
-        <a href="/services.html">Servicios</a>
-        <a href="/contact.html">Contacto</a>
-        </ul>
-      </nav>
+<nav class="navbar">
+  <button class="menu-toggle" onclick="document.querySelector('.navbar ul').classList.toggle('show')">☰</button>
+  <ul class="nav-links">
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="about.html">Sobre mí</a></li>
+    <li><a href="services.html">Servicios</a></li>
+    <li><a href="contact.html">Contacto</a></li>
+  </ul>
+</nav>
 
       <!-- Redes y cita -->
       <div class="header-actions">
@@ -95,4 +97,3 @@
 </footer>
 </body>
 </html>
-
